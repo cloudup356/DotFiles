@@ -1,0 +1,36 @@
+TMUX:
+------------------------
+leader button = CTRL + b
+
+
+------------------------
+start tmux = tmux
+
+make a new window = leader + c
+
+move to next window = leader + n
+
+move to a different window = leader + (number of window)
+
+split vertical = leader + %
+
+split horizontal = leader + "
+
+move pain = leader + UP, DOWN, LEFT, RIGHT
+
+command mode = leader + :
+
+change window name = (command mode) rename-window (new window name)
+
+detach tmux session = leader + d
+
+list tmux sessions = tmux ls
+
+attach to tmux session = tmux attach
+
+to make a new tmux session = (exit tmux) tmux
+
+list all sessions within tmux = leader + s
+
+to rename session = (command mode) rename-session (new session name)
+
