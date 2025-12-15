@@ -1,14 +1,20 @@
 TMUX:
 ------------------------
-leader button = CTRL + b
+leader button = CTRL + a
 
 
 ------------------------
 start tmux = tmux
 
-make a new window = leader + c
+make a new window = Alt + c
 
-move to next window = leader + n
+move to next window = Alt + n
+
+close window = Alt + x
+
+previous window = Alt + p
+
+close a pane = leader + x
 
 move to a different window = leader + (number of window)
 
