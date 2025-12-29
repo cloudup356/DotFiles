@@ -68,7 +68,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 -- vim.keymap.set('n', '<C-q>', ':Neotree filesystem reveal left<CR>', {})
 vim.keymap.set('n', '<C-q>', ':Neotree filesystem reveal left toggle<cr>', { desc = 'Toggle Neo-tree' })
 
-
+vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 
 require("mason").setup()
@@ -95,6 +98,7 @@ config.setup({
 })
 
 
+vim.opt.number = true
 
 
 
