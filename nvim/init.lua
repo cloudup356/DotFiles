@@ -65,8 +65,7 @@ vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = 'Telescope live grep' }
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
--- vim.keymap.set('n', '<C-q>', ':Neotree filesystem reveal left<CR>', {})
-vim.keymap.set('n', '<C-q>', ':Neotree filesystem reveal left toggle<cr>', { desc = 'Toggle Neo-tree' })
+vim.keymap.set('n', '<C-q>', ':Neotree filesystem toggle reveal left<cr>', { desc = 'Toggle Neo-tree' })
 
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
