@@ -53,7 +53,41 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
-}
+},
+
+{
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('dashboard').setup({
+        theme = 'hyper',
+        config = {
+          week_header = { enable = true }, -- Big date/time text
+          header = {
+            [[                                     ]],
+            [[   _  __               _             ]],
+            [[  | |/ /              (_)            ]],
+            [[  | ' / ___ _ __ _ __  _ _ __        ]],
+            [[  |  < / _ \ '__| '_ \| | '_ \       ]],
+            [[  | . \  __/ |  | | | | | | | |      ]],
+            [[  |_|\_\___|_|  |_| |_|_|_| |_|      ]],
+            [[                                     ]],
+          },
+          shortcut = {
+            { desc = '󰈞 Find File', group = 'Label', action = 'Telescope find_files', key = 'f' },
+            { desc = '󰊄 Recent', group = 'DiagnosticHint', action = 'Telescope oldfiles', key = 'r' },
+            { desc = ' Config', group = 'Number', action = 'edit $MYVIMRC', key = 'c' },
+            { desc = '󰒲 Lazy', group = 'Constant', action = 'Lazy', key = 'l' },
+            { desc = '󰈭 Quit', group = 'Error', action = 'qa', key = 'q' },
+          },
+        },
+      })
+    end,
+  },
+
+
+
 
     -- add your plugins here
   },
@@ -83,7 +117,7 @@ require("mason").setup()
 require("mason-lspconfig").setup ({
 
     ensure_installed = { "lua_ls", "rust_analyzer",
-	"clangd", "asm_lsp", "pyright", "autotools_ls", "sqlls", "gopls", "html", "cssls", "zls"
+	"clangd", "pyright", "autotools_ls", "sqlls", "gopls", "html", "cssls", "zls"
 	},
 	automatic_installation = true,
 
