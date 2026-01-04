@@ -1,0 +1,93 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "padding": {
+      "top": 1,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": " ➜  ",
+    "color": {
+        "title": "yellow",    // The "user@hostname" part
+        "keys": "magenta",       // The labels on the left
+        "separator": "white", // The ":" or "➜"
+        "output": "white"
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    // --- SYSTEM SECTION ---
+    {
+      "type": "os",
+      "key": "󰣇 OS",
+      "format": "{3} {12}" // Shows Arch + Architecture
+    },
+    {
+      "type": "host",
+      "key": "󰌢 PC"
+    },
+    {
+      "type": "kernel",
+      "key": " Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "󱎫 Uptime"
+    },
+    {
+      "type": "packages",
+      "key": "󰏖 Packages"
+    },
+    "break",
+    // --- HARDWARE SECTION ---
+    {
+      "type": "cpu",
+      "key": "󰻠 CPU",
+      "temp": true // Shows CPU Temperature
+    },
+    {
+      "type": "gpu",
+      "key": "󰍛 GPU",
+      "temp": true
+    },
+    {
+      "type": "memory",
+      "key": "󰑭 RAM"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 DISK",
+      "folders": "/"
+    },
+    "break",
+    // --- SOFTWARE SECTION ---
+    {
+      "type": "shell",
+      "key": " SHELL"
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal"
+    },
+    {
+      "type": "wm",
+      "key": " Window-Manager"
+    },
+    {
+      "type": "editor",
+      "key": "󟤦 ED"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": " ",
+      "paddingLeft": 0,
+      "block": {
+        "width": 3
+      }
+    }
+  ]
+}
