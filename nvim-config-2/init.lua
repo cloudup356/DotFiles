@@ -21,3 +21,4 @@ require("lazy").setup({
 
 require("user.options")
 require("user.keymaps")
+
