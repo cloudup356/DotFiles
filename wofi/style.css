@@ -1,43 +1,54 @@
 window {
     margin: 0px;
-    border: 2px solid #444;
-    background-color: #1e1e2e; /* Dark Purple/Black */
-    font-family: "monospace";
-    font-size: 16px;
-    border-radius: 10px;
+    border: 2px solid #33ccff; /* Change this to your favorite accent color */
+    background-color: rgba(30, 30, 46, 0.9); /* Dark semi-transparent background */
+    border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font", "Sans";
+    font-size: 14px;
+}
+
+#outer-box {
+margin: 10px;
+border: none;
 }
 
 #input {
-    margin: 5px;
-    border: none;
-    color: #cdd6f4;
-    background-color: #313244;
+margin: 5px;
+border: none;
+color: #cdd6f4;
+background-color: #313244;
+border-radius: 8px;
+padding: 8px;
 }
 
-#entry:selected {
-    background-color: #89b4fa; /* Blue highlight */
-    border-radius: 5px;
+#inner-box {
+margin: 5px;
+border: none;
+background-color: transparent;
 }
 
-#text:selected {
-    color: #1e1e2e;
+#scroll {
+margin: 0px;
+border: none;
 }
 
-
-
-
-image {
-    margin-right: 15px; /* Increase this number to add more space */
-}
-
-/* Optional: Targets the text to give it some padding as well */
 #text {
-    margin-left: 5px;
+margin: 5px;
+border: none;
+color: #cdd6f4;
 }
 
+#entry {
+border: none;
+border-radius: 8px;
+}
 
-image {
-    margin-right: 15px;
-    min-width: 24px;
-    min-height: 24px;
+/* Hover/Selection effect */
+#entry:selected {
+background-color: #33ccff;
+}
+
+#entry:selected #text {
+color: #11111b;
+font-weight: bold;
 }

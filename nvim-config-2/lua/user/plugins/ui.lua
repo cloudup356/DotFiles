@@ -22,6 +22,7 @@ return {
     end,
   },
   -- Dashboard (Start Screen)
+
   {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
@@ -29,12 +30,24 @@ return {
       require('dashboard').setup({
         theme = 'hyper',
         config = {
-          week_header = { enable = true },
+         header = {
+          " ██████  █████                                 ███                  ",
+          "▒▒██████ ▒▒███                                 ▒▒▒                  ",
+          " ▒███▒███ ▒███  ██████   ██████  █████ █████ ████  █████████████  ",
+          " ▒███▒▒███▒███ ███▒▒███ ███▒▒███▒▒███ ▒▒███ ▒▒███ ▒▒███▒▒███▒▒███ ",
+          " ▒███ ▒▒██████ ▒███████ ▒███ ▒███ ▒███  ▒███  ▒███  ▒███ ▒███ ▒███ ",
+          " ▒███  ▒▒█████ ▒███▒▒▒  ▒███ ▒███ ▒▒███ ███   ▒███  ▒███ ▒███ ▒███ ",
+          " █████  ▒▒█████▒▒██████ ▒▒██████   ▒▒█████    █████ █████▒███ █████",
+          "▒▒▒▒▒    ▒▒▒▒▒  ▒▒▒▒▒▒   ▒▒▒▒▒▒     ▒▒▒▒▒    ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒▒▒▒ ",
+          "", -- Empty line for spacing
+        },
           shortcut = {
             { desc = '󰈞 Find File', action = 'Telescope find_files', key = 'f' },
             { desc = '󰒲 Lazy', action = 'Lazy', key = 'l' },
             { desc = '󰈭 Quit', action = 'qa', key = 'q' },
           },
+	packages = { enable = false },
+	footer = {},
         },
       })
     end,
